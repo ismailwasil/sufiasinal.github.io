@@ -1,0 +1,98 @@
+:root {
+    --primary-gold: #d4af37;
+    --soft-ivory: #faf9f6;
+    --deep-bronze: #4a3728;
+    --overlay-dark: rgba(28, 25, 23, 0.85);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--soft-ivory);
+    color: var(--deep-bronze);
+    overflow-x: hidden;
+}
+
+.font-serif {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.font-cursive {
+    font-family: 'Alex Brush', cursive;
+}
+
+/* Premium Hero Parallax */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1920');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.gold-gradient {
+    background: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fcf6ba, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.glass-premium {
+    background: #ffffff1a;
+    backdrop-filter: blur(15px);
+    border: 1px solid #ffffff33;
+    box-shadow: 0 15px 35px #00000033;
+}
+
+/* Particles effect simulation */
+.particle {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.3;
+    pointer-events: none;
+    animation: float-up var(--duration) linear infinite;
+}
+
+@keyframes float-up {
+    from {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Custom Cursors & Interactions */
+.btn-gold {
+    background: linear-gradient(45deg, #bf953f, #aa771c);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-gold:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(170, 119, 28, 0.3);
+}
+
+/* Image Masking */
+.arch-frame {
+    clip-path: ellipse(50% 100% at 50% 100%);
+    border-top-left-radius: 50% 20%;
+    border-top-right-radius: 50% 20%;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-gold);
+}
